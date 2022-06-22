@@ -25,40 +25,13 @@ jobs:
       - heroku/deploy-via-git:
           force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
 
-# workflows:
-#   test_my_app:
-#     jobs:
-#       - build_and_test
-#       - deploy:
-#           requires:
-#             - build_and_test # only deploy if the build_and_test job has completed
-#           filters:
-#             branches:
-#               only: main # only deploy when on main
 workflows:
-  heroku_deploy:
+  test_my_app:
     jobs:
-      - build
-      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+      - build_and_test
+      - deploy:
           requires:
-            - build
+            - build_and_test # only deploy if the build_and_test job has completed
           filters:
             branches:
-              only: sequential-branch-filter
-jobs:
-  build:
-    docker:
-      - image: cimg/node:15.0.1-browsers
-        auth:
-          username: brucewayne11062001
-          password: Utkarsh@11  # context / project UI env-var reference
-    working_directory: ~/circleci-demo-workflows
-    # steps:
-    #   - checkout
-    #   # Bundle install dependencies
-    #   - run: bundle install --path vendor/bundle
-    #   # Database setup
-    #   - run: bundle exec rake db:create db:schema:load
-    #   - run:
-    #       name: Run tests
-    #       command: rake
+              only: main # only deploy when on main
