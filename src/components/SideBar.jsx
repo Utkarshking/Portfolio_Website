@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./MainProject.scss";
 import avatar from "./Images/Avatar.jpg";
+import profile from "./Images/profile.jpg"
 import { GoHome } from "react-icons/go";
 import { ImAttachment, ImLinkedin } from "react-icons/im";
 import { BsPen, BsTwitter, BsPerson } from "react-icons/bs";
@@ -75,9 +76,9 @@ class SideBar extends Component {
       //   <div className="parentProfileDiv ">
       <div>
           <div className="profileNameHandleDiv ">
-            <img src={avatar} className="profileImage" alt="Profile" />
+            <img src={profile} className="profileImage" alt="Profile" />
             <br />
-            <h1 className="nameSect"> NAME </h1>
+            <h1 className="nameSect"> Utkarsh Singh </h1>
 
             <div className="handleIcons">
               <a href={"https://twitter.com"}>
@@ -92,7 +93,7 @@ class SideBar extends Component {
                 />
               </a>
               <span> </span>
-              <a href={"https://linkedin.com/in/abhishekkguptaa "}>
+              <a href={"https://www.linkedin.com/in/utkarsh-singh-9a6853192/"}>
                 <ImLinkedin
                   className="handleIconsBorder"
                   Tooltip

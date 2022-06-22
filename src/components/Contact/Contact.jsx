@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Typical from "react-typical";
-import { BsPhone, BsTwitter, BsGithub } from "react-icons/bs";
+import { BsTwitter, BsGithub } from "react-icons/bs";
 import { ImLinkedin } from "react-icons/im";
 import { HiOutlineMail } from "react-icons/hi";
 import "./Contacts.scss";
@@ -36,7 +36,7 @@ class Contact extends Component {
             </a>
             <span> </span>
             <a href="mailto:abhishe.gupta@synapsica.com">
-              <HiOutlineMail title="Email" className="contactIcon" color="white"/>
+              <HiOutlineMail title="Email" className="contactIcon" color="white" />
             </a>
             <span> </span>
 
@@ -93,12 +93,17 @@ class Contact extends Component {
               <br />
               Your Message
               <br />
-              <input
-                type="text"
+              {/* <textarea
+                // type="text"
+                // resize="both"
                 id="message"
                 name="message"
                 className="messageField"
-              ></input>
+                overflow="auto"
+              ></textarea> */}
+              <textarea className="messageField"id="w3review" name="w3review" rows="4" cols="80">
+         
+              </textarea>
               <br />
               <br />
               <button className="submitButton">Message</button>

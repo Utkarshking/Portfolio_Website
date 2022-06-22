@@ -1,7 +1,41 @@
 @import "../MainProject.scss";
-.SkillBackground{
-background-color: $bgcolor;
+$skillcards:var(--skillcardscolor);
+.skillsCard{
+    margin-left: 240px ;
+    background-color: black;
+    padding-top: 100px;
+    padding-bottom: 109px;
 }
-.SkillsPara{
-    color:$textcolor;
+.heading{
+    color: white;
+    text-align: left;
+    padding-left: 260px;
+    background-color: black;
+    font-family: cursive ;
+    text-decoration: underline 2px;
+
+}
+.maindiv{
+    background-color: black;
+}
+.androidLogo{
+    height: 160px;
+    width: auto;
+}
+.ml{
+    height: 180px;
+    width: auto;
+}
+.cpClass{
+    height: 160px;
+    width: auto;
+}
+
+.htmlcss{
+    width: 220px;
+    height: auto;
+}
+.backgroundcards{
+    background-color:$skillcards !important;
+    color:black !important;
 }

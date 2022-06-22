@@ -52,7 +52,9 @@
 .messageField {
     border-radius: 10px;
     width: 24em;
-    height: 20em;
+    // height: 20em;
+    // cols:80;
+    // rows:4;
     font-family: cursive;
     background-color: whitesmoke;
 }
@@ -79,6 +81,6 @@
 .submitButton {
     border-radius: 5px;
     border: 1em none;
-    background-color: $bgcolor;
+    background-color: black;
     color: aliceblue;
 }
